@@ -1,0 +1,24 @@
+Which Linux flavour you have worked on?
+
+Command to list out processes?
+  Top and htop
+  ps -ef
+
+
+What do you know about filters?
+ Grep
+ AWK 
+ CUT
+
+
+
+------------------------------------------------------------------------------------------------------
+
+What could be the reason why applicaation is not deploying on Kubernetes
+
+Do you know about node groups and nodes?
+
+
+
+
+
