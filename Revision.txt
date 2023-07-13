@@ -1,0 +1,12 @@
+Go through OS register
+Linux commands strongly
+Kubernetes and docker histroy and commands
+Kubernetes components
+
+
+
+
+
+------------------------------
+
+ Vanilla Kubernetes is a K8s environment that runs the most basic components required, but not much more than that.
