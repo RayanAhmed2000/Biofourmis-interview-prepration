@@ -2,8 +2,24 @@ Go through OS register
 Linux commands strongly
 Kubernetes and docker histroy and commands
 Kubernetes components
+Networking
+  Host Id 
+  subnet Id
 
 
+
+
+EKS
+  Node
+  Decommsioning of clusters
+
+Prometheus
+Grafana
+
+Alerts
+  OUM 
+
+Bash scriping
 
 
 
