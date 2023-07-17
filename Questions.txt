@@ -4,19 +4,96 @@ Command to list out processes?
   Top and htop
   ps -ef
 
+Components of Kubernetes.
+
+How will you take backup off Kubernetes?
+  - ETCD already have the current state just need to take backup of ETCD
 
 What do you know about filters?
  Grep
  AWK 
  CUT
 
+What have you worked on till now?
+
+What do you know about kubernetes?
+  How does self healing work
+  How does High Availability work (RC and DC)
+
+I have an application running on POD and developer comes with some changes I want to make changes to the POD What do you think will be the downtime
+
+
+What happens when POD exceeds CPU and memory ?
+Whenever a pod exceeds its memory limit a signal SIGKILL is sent which immediately terminates the container and spawns a new one with OOM(out of memory) error.
+If memory consumption increases pod will be terminated but in case of CPU, os can allow tiny time slices to consume more than allowed CPU share.
+
+SRE Activities?
+- monitoring
+
+Are you OK with this Job?
+
+
+How will you deal with tickets?
+First I will check the priority of the ticket and try my best to trobleshoot and resolve it but if its not resolved within 5 minutes of initial troubleshooting 
+then of course I will not let my overconfidnece impact client financially and immediately I will reach out to the L2 available in the shift with proper findings
+
+What is reqiuitred to monitor EKS ?
+  - CloudWatch Container Insights provides a comprehensive metrics monitoring solution for Amazon EKS at the cluster, node, pod, task, and service level. Amazon EKS also supports multiple options for metrics capture with Prometheus
+
+
+Staus Codes
+200 OK. The 200 OK status code indicates the request succeeded. ...
+303 See Other. The 303 See Other status code indicates that you are being redirected to another resource via the "Location" response header. ...
+400 Bad request. ...
+404 Resource not found Authentication error
+500 Internal server error.
+
+If everything is managed by Kubernetes then why do we need monitoring
+Kubernetes monitoring allows cluster administrators and users to monitor the cluster and identify issues such as insufficient resources, failures, pods that are unable to start, or nodes that cannot join the cluster.
+
+What do you know about kubernetes logs?
+
+Website is working but few Icons/photos are not loading? How will you know where is the error?
+
+Youre watching a movie and it suddenly stops? What will you do?
+Dont answer CHeck internet connectivity
+ANswer like a SRE 
+  PODS
+  Network Ingress
+  DNS resolution
+  Logs
+
+Drawbacks of docker over Kubernetes?
+ - No centralized management
+ - Single point of failure
+ - No communication between Containers running on different host
+ - No Scalability
+ - Volume attach manually
+
+What are your goals in case we select you?
+Well I guess if thr position is of SRE Then an SRE engineer is responsible for 
+  Reliability Scalability and HIgh availability
+  Change managment
+
+KUbeadm- allows to setup highly available multi node setup
+minikube - simpler setup on just one node
+Vanilla kubernetes - most basic kubernetes
+
+kubectl create -f <filename>.yml             # create a deployment with yaml file 
 
 
 ------------------------------------------------------------------------------------------------------
 
-What could be the reason why applicaation is not deploying on Kubernetes
+What could be the reason why application is not deploying on Kubernetes
 
 Do you know about node groups and nodes?
+
+------------------------------------------------------------------------------------------------------
+
+QUESTIONS TO ASK
+
+How will be my time tracking
+
 
 
 
