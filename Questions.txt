@@ -79,18 +79,11 @@ KUbeadm- allows to setup highly available multi node setup
 minikube - simpler setup on just one node
 Vanilla kubernetes - most basic kubernetes
 
-kubectl create -f <filename>.yml             # create a deployment with yaml file 
-
-
-------------------------------------------------------------------------------------------------------
-
 What could be the reason why application is not deploying on Kubernetes
 
 Do you know about node groups and nodes?
 
-------------------------------------------------------------------------------------------------------
 
-QUESTIONS TO ASK
 
 
 
