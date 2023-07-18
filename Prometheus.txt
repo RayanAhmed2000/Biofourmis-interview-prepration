@@ -1,0 +1,22 @@
+- ALthogh can be used to monitor non containerized infra
+- but over the past years main stream monitoring tool of choice in containers and microservices architecture
+
+WHY?
+Moderm devops is becoming more and more complex with lenthy CICD pipe lines that have services strictly dependent on one anothger
+where in failure of one service can lead a huge disaster 
+So when application is down and you need to figure out quickly that among thousands of pods which one is exactly having error
+Monitoring is very useful
+
+SCenario
+One of the servers went low on memory and kicked off a running conatiner that was responsible for 
+providing database sync btw two database pods 
+= two database failed
+Application cannot authenbticate users 
+= end users will only see unable to authenticate error 
+
+So now we will check everythging backwards which will take a lot of time
+
+BUt what would make this process faster is if we had a continous monitoring tool
+that would tell us that a particular pod jhas crashed
+or even better if it could tell that the server might be low on memory
+
