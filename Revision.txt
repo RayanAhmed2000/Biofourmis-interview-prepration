@@ -1,7 +1,7 @@
-Go through OS register
-Linux commands strongly
-Kubernetes and docker histroy and commands
-Kubernetes components
+Go through OS register   DONE
+Linux commands strongly  DONE
+Kubernetes and docker histroy and commands DONE
+Kubernetes components    DONE
 
 Networking
   Host Id 
@@ -22,10 +22,6 @@ Alerts
   OUM 
 
 Bash scriping
-
-
-Command flow
-
 
 Kubernetes Imprtant Notes
 
