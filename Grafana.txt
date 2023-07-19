@@ -1,0 +1,10 @@
+Open source install
+- data monitoring 
+- analysis
+- data visualization
+- port 3000
+
+
+
+INflux DB 
+- 8086
