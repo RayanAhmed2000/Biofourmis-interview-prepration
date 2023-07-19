@@ -24,6 +24,8 @@ I have an application running on POD and developer comes with some changes I wan
 
 
 What happens when POD exceeds CPU and memory ?
+
+
 Whenever a pod exceeds its memory limit a signal SIGKILL is sent which immediately terminates the container and spawns a new one with OOM(out of memory) error.
 If memory consumption increases pod will be terminated but in case of CPU, os can allow tiny time slices to consume more than allowed CPU share.
 
