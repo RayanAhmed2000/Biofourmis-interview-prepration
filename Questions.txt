@@ -94,11 +94,12 @@ Image is not on ECR
 
 
 Do you know about node groups and nodes?
+Nodes are VM or EC2 instances 
+Node groups are group of EC2 instances
 
 
 Daemon sets?
-When you add a node automatically the pod will be made to run on it and when you remove a pod automatically pod will be deleted.
-As soon as a node joins the cluster, the DaemonSet ensures that it has the necessary pods running on it.
+Daemon set is used to run daemon pod on nodes 
 If you delete a daemon set all pods of daemon set will also be deleted
 
 
