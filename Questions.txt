@@ -15,17 +15,25 @@ What do you know about filters?
  CUT
 
 What have you worked on till now?
+  - I am currently working as ....
+  - We are the first point of contact
+  - So in our support we perform many tasks as apart of esuring the availability of clients infrastructure
+      - monitoring
+      - auditing
+      - patching
+      - GSTN
+    
+
 
 What do you know about kubernetes?
   How does self healing work
   How does High Availability work (RC and DC)
 
 I have an application running on POD and developer comes with some changes I want to make changes to the POD What do you think will be the downtime
+No downtime if we use DC because in dc we define MaxSurge, MaxUnavailable
 
 
 What happens when POD exceeds CPU and memory ?
-
-
 Whenever a pod exceeds its memory limit a signal SIGKILL is sent which immediately terminates the container and spawns a new one with OOM(out of memory) error.
 If memory consumption increases pod will be terminated but in case of CPU, os can allow tiny time slices to consume more than allowed CPU share.
 
@@ -62,7 +70,6 @@ Dont answer CHeck internet connectivity
 ANswer like a SRE 
   PODS
   Network Ingress
-  DNS resolution
   Logs
 
 Drawbacks of docker over Kubernetes?
@@ -81,9 +88,20 @@ KUbeadm- allows to setup highly available multi node setup
 minikube - simpler setup on just one node
 Vanilla kubernetes - most basic kubernetes
 
-What could be the reason why application is not deploying on Kubernetes
+What could be the reason why application is not deploying on Kubernetes?
+Image name is incorrect
+Image is not on ECR
+
 
 Do you know about node groups and nodes?
+
+
+Daemon sets?
+When you add a node automatically the pod will be made to run on it and when you remove a pod automatically pod will be deleted.
+As soon as a node joins the cluster, the DaemonSet ensures that it has the necessary pods running on it.
+If you delete a daemon set all pods of daemon set will also be deleted
+
+
 
 
 
