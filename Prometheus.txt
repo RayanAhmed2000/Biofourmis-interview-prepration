@@ -1,5 +1,12 @@
+- Open source monitoring and alertimng tool
 - ALthogh can be used to monitor non containerized infra
 - but over the past years main stream monitoring tool of choice in containers and microservices architecture
+- pull based mechanism (Being pull-based means that the prometheus server pulls metrics from targets (your infrastructure and applications) rather than infrastructure and applications pushing metrics data to Prometheus.)
+- uses its own query language that is PROMQL
+- For POD level monitoring -> Kubestate metrics
+- Node exporter -> Node level monitoring
+- scrape config 
+- Prometheus typically uses an HTTP endpoint
 
 WHY?
 Moderm devops is becoming more and more complex with lenthy CICD pipe lines that have services strictly dependent on one anothger
