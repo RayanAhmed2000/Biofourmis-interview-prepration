@@ -7,23 +7,24 @@ Networking
   Host Id 
   subnet Id
 
+Network ID is the bit that denotes network
+Host ID denotes the host
 
-liveness and rediness
-
+liveness and rediness probes DONE
 
 EKS
   Node
   Decommsioning of clusters
 
-Prometheus
-Grafana
+Prometheus DONE 
+Grafana DONE
 
 Alerts
-  OUM 
+  OUM DONE 
 
-Bash scriping
+Bash scriping DONE
 
-Kubernetes Imprtant Notes
+Kubernetes Imprtant Notes DONE
 
 Command - > KubeAPI -> Kubelet -> Kubescheduler -> Kubecontroller -> Kubelet -> Workeer Node
 Kubectl - command utility
