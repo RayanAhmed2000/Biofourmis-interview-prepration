@@ -197,6 +197,16 @@ questions
 
 port and target port
 
+---------------------------------------------------------
+
+HELM
+
+- package manager for kubernetes
+- bundle of YAML files are known as HELM CHARTS
+- you can push your helm chart onto helm repository or download existing ones
+- mongoDB Mysql or setup of any monitoring tool such as prometheus or grafana helm charts can be found 
+- we can search deployments on Helm repo 'helm search <keyword>'
+
 
 
 
