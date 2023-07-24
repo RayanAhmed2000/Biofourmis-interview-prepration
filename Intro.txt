@@ -5,6 +5,7 @@ I have done my schooling from saint Josephs Cathedral that is the biggest
 After this I went on to pursue my higher eductaion in INtegal University from where I did my Bachelors in Computer science
 Currently I am working as a cloud opertaions engineer at TTN
 And as a part of my job I have to monitor and troubleshoot infra level issues for our clients perform auditing and patching and provide ad hoc data to clients 
+also there have been some situations where there were issues related to kubernetes and pods because some of my clients like comviva do have their infra on kubernetes
 and the cool thing about our job is that we consider clients infra as our own in the sense that we also give reocmmedatiosn to clients as for where they can save cost
 and make their infra more secure and efficient.
 Sketching and painting is a part of my hobbies and I like to playbadminton
