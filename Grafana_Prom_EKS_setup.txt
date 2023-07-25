@@ -1,0 +1,8 @@
+Pre-requisites
+- download AWS cli
+- download eks cli
+- download helm
+
+Process
+- In terminal run eksclt create cluster
+- download prometheus using helm
