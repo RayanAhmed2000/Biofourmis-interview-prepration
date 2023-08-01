@@ -1,49 +1,50 @@
+HOST AND NETWORK ID
+-------------------
+
 Networking
   Host Id 
   subnet Id
-
 Network ID is the bit that denotes network
 Host ID denotes the host
 
-liveness and rediness probes DONE
 
-EKS
-  Node
-  Decommsioning of clusters
+TOPICS
+------
 
-Prometheus DONE 
-Grafana DONE
+-> liveness and rediness probes 
+-> Prometheus and Grafana 
+-> Alerts OUM  
+-> Bash scriping DONE
 
-Alerts
-  OUM DONE 
-
-Bash scriping DONE
-
-Kubernetes Imprtant Notes DONE
+KUBERNETES COMMAND EXECUTION PROCESS
+------------------------------------
 
 Command - > KubeAPI -> Kubelet -> Kubescheduler -> Kubecontroller -> Kubelet -> Workeer Node
 Kubectl - command utility
 
 
 BRIDGE VS CALICO
+----------------
 Containers in diffrent bridge network cannot communicate with each other
 Containers in diffrent networks can ping each other
 
 CONTROL PLANE VS SYSTEM MODE INSTALLATION
+-----------------------------------------
 Control plane all services have their respective pods so that if one servoce fails others are not impacted
 System mode installation
-
 
 Namespaces are a way to organize clusters into virtual sub-clusters
 It is just like a project we can use to orgaize 
 By default namspace - kube-system
 
 ERRORS 
+------
 Crash loop back - Memory nahi mil rahi pod ko
 Image puul back - Wromg image us nam ki image exist nahi karti registery pe name or HTTP/HTTPS blocked 
 
 
 LABELS AND SELECTORS
+--------------------
 RC and DC use these to identify their pods
 LABELS - applied on pod/node side
 SELECTORS - applied on rc/rs/dc side
@@ -52,6 +53,7 @@ RC kehta hai jis bhi POD ka LABEL nginx hoga wo mera hoga
 
 
 POD SCHEDULING
+--------------
 
 NEED?
 I want that on this node only monitoring pods be created because these are battamiz POD they will eat up a lot of storage if they are scheduled somewhere else
@@ -86,12 +88,12 @@ If we have multiple labels, then in case of RC if any one labels matches RC keht
 And in case of RS jab tak saare labels match nahi hote tab tak wo nahi manta ki ye POD mera hai
 
 Why is my pod going in pending state
-
 Label and nodeselector value not matching
 You have tainted nodes and tolerations are not defned
+Kubescheduler ka pod that is on master node is not running
 
 DEBUGGING
-
+---------
 Kubectl get logs <podname> view logs
 kubectl get events 
 
@@ -101,6 +103,8 @@ A node group is one or more Amazon EC2 instances that are deployed in an Amazon 
 
 
 RESOURCE AND COMPUTE QUOTAS
+---------------------------
+
 Compute -> CPU/Memory/Storage
 Resource -> Pod, RS, RC deployment
 
@@ -116,9 +120,10 @@ specs:
           memory:300Mi
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 KUBERNETES NETWORKING
+---------------------
 
 Kube-proxy / service discovery
 service ip or kubeproxy provides endpoints for the application
@@ -135,6 +140,7 @@ to make node port add --type=NodePort
 
 
 EKS
+---
 
 AWS kabhi bhi master node ka access nahi deta 
 If access karna hai to Bastion se karna hoga
@@ -145,13 +151,8 @@ Because IP is Proided on POD Bases so all conatiner insdide single pod will have
 so you can have multiple containers insode 1 pod just for support not for load balancing
 
 
-questions
-
-port and target port
-
----------------------------------------------------------
-
 HELM
+----
 
 - package manager for kubernetes
 - bundle of YAML files are known as HELM CHARTS
