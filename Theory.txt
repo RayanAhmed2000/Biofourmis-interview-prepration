@@ -1,1 +1,167 @@
+Networking
+  Host Id 
+  subnet Id
 
+Network ID is the bit that denotes network
+Host ID denotes the host
+
+liveness and rediness probes DONE
+
+EKS
+  Node
+  Decommsioning of clusters
+
+Prometheus DONE 
+Grafana DONE
+
+Alerts
+  OUM DONE 
+
+Bash scriping DONE
+
+Kubernetes Imprtant Notes DONE
+
+Command - > KubeAPI -> Kubelet -> Kubescheduler -> Kubecontroller -> Kubelet -> Workeer Node
+Kubectl - command utility
+
+
+BRIDGE VS CALICO
+Containers in diffrent bridge network cannot communicate with each other
+Containers in diffrent networks can ping each other
+
+CONTROL PLANE VS SYSTEM MODE INSTALLATION
+Control plane all services have their respective pods so that if one servoce fails others are not impacted
+System mode installation
+
+
+Namespaces are a way to organize clusters into virtual sub-clusters
+It is just like a project we can use to orgaize 
+By default namspace - kube-system
+
+ERRORS 
+Crash loop back - Memory nahi mil rahi pod ko
+Image puul back - Wromg image us nam ki image exist nahi karti registery pe name or HTTP/HTTPS blocked 
+
+
+LABELS AND SELECTORS
+RC and DC use these to identify their pods
+LABELS - applied on pod/node side
+SELECTORS - applied on rc/rs/dc side
+RC me humesha LABEL aur SELECTOR ki value same hogi
+RC kehta hai jis bhi POD ka LABEL nginx hoga wo mera hoga
+
+
+POD SCHEDULING
+
+NEED?
+I want that on this node only monitoring pods be created because these are battamiz POD they will eat up a lot of storage if they are scheduled somewhere else
+
+
+3 types
+Node based scheduling -> not used in production because we can define only one node and igf that node is not healthy then we will face downtime and pod will not be schgeduled
+
+labels and selectors based -> We will assign labels to NODES (kubectl label node <nodename> compute=monitoring)
+selector - Manifest me jake specs ke under we have to add a field nodeSelector:
+compute:monitoring
+
+DRAWBACK - It cannot ensure that other pods will not be scheduled on this node 
+it gives guarentee that your pod will run on a specific node but cant guarentee that other pods will not be scheduled on a specific node
+
+taint and tolerations
+To dedicate compute hardware inside cluster
+taint -> node/pod side
+tolerations -> rs/rc/deployment side
+if I tainted a node then only those pods having that tolerations can be scheduled on that node
+means I tainted node1 as NoSchedule Now no pods will be scheduled on this node only those having tolerations can be
+TAINT - kubectl taint node node1 application:NoSchedule
+QUESTION?
+Why is pod not scheduled on master node?
+Because master node is tainted No schedule
+BUT agar kalko Tainted nodes down hogye to saare pods jinme toleratins hai kisi aur pe schedule ho jaenge
+
+
+
+What is the difference between RC and RS?
+If we have multiple labels, then in case of RC if any one labels matches RC kehta hai ye mera POD Hai
+And in case of RS jab tak saare labels match nahi hote tab tak wo nahi manta ki ye POD mera hai
+
+Why is my pod going in pending state
+
+Label and nodeselector value not matching
+You have tainted nodes and tolerations are not defned
+
+DEBUGGING
+
+Kubectl get logs <podname> view logs
+kubectl get events 
+
+What is node group
+A node group is one or more Amazon EC2 instances that are deployed in an Amazon EC2 Auto Scaling group. All instances in a node group must have the following characteristics: Be the same instance type. Be running the same Amazon Machine Image (AMI) Use the same Amazon EKS node IAM role.
+
+
+
+RESOURCE AND COMPUTE QUOTAS
+Compute -> CPU/Memory/Storage
+Resource -> Pod, RS, RC deployment
+
+requests->200 mb 
+limit -> 300mb
+(200 to use kare hi but 300 se zada na jaye)
+
+specs:
+  resources:
+      requests:
+          memory:200Mi
+      limits:
+          memory:300Mi
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+KUBERNETES NETWORKING
+
+Kube-proxy / service discovery
+service ip or kubeproxy provides endpoints for the application
+
+New pods automatically added into the endpoints of service ip
+HOW? by using labels
+
+SERVICE IP TYPES
+  - CLuster IP (Only accessibler from within pod)
+  - Node Port (Accessibler from outside)
+
+to make node port add --type=NodePort
+
+
+
+EKS
+
+AWS kabhi bhi master node ka access nahi deta 
+If access karna hai to Bastion se karna hoga
+/.kube/config wali file paste karni hogi apni machine pe
+
+Best practice is to run 1 conatiner inside 1 POD
+Because IP is Proided on POD Bases so all conatiner insdide single pod will have same IP
+so you can have multiple containers insode 1 pod just for support not for load balancing
+
+
+questions
+
+port and target port
+
+---------------------------------------------------------
+
+HELM
+
+- package manager for kubernetes
+- bundle of YAML files are known as HELM CHARTS
+- you can push your helm chart onto helm repository or download existing ones
+- mongoDB Mysql or setup of any monitoring tool such as prometheus or grafana helm charts can be found 
+- we can search deployments on Helm repo 'helm search <keyword>'
+
+
+
+
+
+
+  
