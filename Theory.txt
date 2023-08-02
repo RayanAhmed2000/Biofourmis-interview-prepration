@@ -191,8 +191,34 @@ HELM
 - mongoDB Mysql or setup of any monitoring tool such as prometheus or grafana helm charts can be found 
 - we can search deployments on Helm repo 'helm search <keyword>'
 
+DAEMON SETS
+-----------
+
+If I want a particular pod to run on every node then I'll use daemon set
+for example I want to collect logs on each node using elasticache then I create a DS with elasticahce running and that pod will be scheduled on each off my nodes and if a node is removed or deletd then the pod will be deleted as well similarly if a new node comes up the pod of DS will bestarted on it automatically
+
+STATEFUL SETS
+-------------
+
+Used in scenarios where there is kind of a syn between pods i.e. multiple pods are working in collaborations and we do not want our pod names to be changes everytime a new pod starts in place of a former pod that got terminated due to some kind of error because if that happens the sync could break as we are using hard coded values here and if we use IP then its also dynamic it chnages and the also a random name is given to pod evrytime 
+
+So consider a scenaro 
+Where
+
+DB-01 (master)
+^
+|
+DB-02(Read replicas)
+DB-03(Read replicas)
+
+now even if the pod restarts or fails it will always come up with the same name
 
 
+EXIT CODES - In case if the container got exited/terminated unexpectedly, container engines reports why the container got terminated with exit codes.
+
+CODE #	Reason	details
+Exit Code 0	Purposely stopped	Used by developers/devops/sre to indicate that the container was automatically stopped
+Exit Code 1	Application error	Container was stopped due to application error or incorrect reference in the image/configuration specification
 
 
 
