@@ -149,8 +149,24 @@ to make node port add --type=NodePort
 INGRESS
 -------
 
-Suppose I have a shopping website and I deploy it a non containerized enviroment
-Then if suppose IM usinmg an ASG then ILl need a load balanvcer
+Suppose I have a shopping website and I deploy it on AWS ASG now what will be the path 
+Domain -> DNS -> LB -> TG -> Instance 
+Now suppose I add a new feature where users can watch my streaming service and that I want to be on another TG because it has a diffrent kind of application enviroment setup
+so now
+i WANT My old website to be available at say DNS www.mystore.com/buy
+and new one at www.mystore.com/watch
+Now I need 1 LB for ww.mystore.com/buy
+And 1 for ww.mystore.com/watch 
+And yet one for path based routing /buy or /wear
+and that will cost me bills
+As well as I need to enable ssl for my application so that my users can access via https
+
+Now thats a lot of configuration and expensive as well
+
+Now wouldnt it be nice if we could manage all of this from within kubernetes cluster with the help of a service that has a yml file that lives along the rest of our application deployment file.
+
+INGRESS HELPS YOUR USERS ACCESS YOUR KUBERNETES APPLICATION USING A SINGLE EXTERNALLY ACCESSIBLE URL THAT WE CAN CONFIGURE TO ROUTR TRAFFIC BASED ON PATH AS WELL AS IMPLIMENT SSL SECURITY AS WELL
+
 
 
 
