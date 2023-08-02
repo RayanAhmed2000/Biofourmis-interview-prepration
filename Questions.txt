@@ -42,6 +42,10 @@ SRE Activities?
 
 Are you OK with this Job?
 
+What are init containers?
+init conatiners are just like normal conatiners that run before the main conatiner starts
+like ec2 user data 
+
 
 How will you deal with tickets?
 First I will check the priority of the ticket and try my best to trobleshoot and resolve it but if its not resolved within 5 minutes of initial troubleshooting 
