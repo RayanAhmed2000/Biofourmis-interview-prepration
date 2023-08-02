@@ -1,0 +1,3 @@
+PENDING STATE
+
+“Pending” status for a Pod means that the Pod has been accepted by the K8s system, but it hasn’t been scheduled for running on a node yet
