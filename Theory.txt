@@ -214,11 +214,15 @@ DB-03(Read replicas)
 now even if the pod restarts or fails it will always come up with the same name
 
 
-EXIT CODES - In case if the container got exited/terminated unexpectedly, container engines reports why the container got terminated with exit codes.
+EXIT CODES
+-----------
+
+- In case if the container got exited/terminated unexpectedly, container engines reports why the container got terminated with exit codes.
 
 CODE #	Reason	details
 Exit Code 0	Purposely stopped	Used by developers/devops/sre to indicate that the container was automatically stopped
 Exit Code 1	Application error	Container was stopped due to application error or incorrect reference in the image/configuration specification
+Exit code 137 means a container or pod is trying to use more memory than it’s allowed. 
 
 
 
