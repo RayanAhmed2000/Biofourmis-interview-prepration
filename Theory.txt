@@ -69,18 +69,26 @@ compute:monitoring
 DRAWBACK - It cannot ensure that other pods will not be scheduled on this node 
 it gives guarentee that your pod will run on a specific node but cant guarentee that other pods will not be scheduled on a specific node
 
-taint and tolerations
+TAINTS AND TOLERATIONS
 To dedicate compute hardware inside cluster
 taint -> node/pod side
 tolerations -> rs/rc/deployment side
 if I tainted a node then only those pods having that tolerations can be scheduled on that node
 means I tainted node1 as NoSchedule Now no pods will be scheduled on this node only those having tolerations can be
 TAINT - kubectl taint node node1 application:NoSchedule
+
+if yoy taint a node while pod are running on it to wo bina toleration wlae podds ko bhaga ke kill kardega
+
+SUMMARY - taint and tolerations does not tell pod to go to a particular node instead it tells the node to only accept pod with certain toleartions.
+
 QUESTION?
 Why is pod not scheduled on master node?
 Because master node is tainted No schedule
 BUT agar kalko Tainted nodes down hogye to saare pods jinme toleratins hai kisi aur pe schedule ho jaenge
 
+
+VERY IMPORTANT - A combination of NodeAffinity and Taints and tolerations can be used to dedicate a particular node for a pod
+First use taints and toleratoions to prevent other pods being scheuled on this node and then use node affinity that is labels and selectors to prevent pods being scheduled on any othe rnode.
 
 
 What is the difference between RC and RS?
@@ -136,6 +144,13 @@ SERVICE IP TYPES
   - Node Port (Accessibler from outside)
 
 to make node port add --type=NodePort
+
+
+INGRESS
+-------
+
+Suppose I have a shopping website and I deploy it a non containerized enviroment
+Then if suppose IM usinmg an ASG then ILl need a load balanvcer
 
 
 
