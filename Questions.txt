@@ -47,10 +47,6 @@ init conatiners are just like normal conatiners that run before the main conatin
 like ec2 user data 
 
 
-How will you deal with tickets?
-First I will check the priority of the ticket and try my best to trobleshoot and resolve it but if its not resolved within 5 minutes of initial troubleshooting 
-then of course I will not let my overconfidnece impact client financially and immediately I will reach out to the L2 available in the shift with proper findings
-
 What is reqiuitred to monitor EKS ?
   - CloudWatch Container Insights provides a comprehensive metrics monitoring solution for Amazon EKS at the cluster, node, pod, task, and service level. Amazon EKS also supports multiple options for metrics capture with Prometheus
 
@@ -66,8 +62,6 @@ If everything is managed by Kubernetes then why do we need monitoring
 Kubernetes monitoring allows cluster administrators and users to monitor the cluster and identify issues such as insufficient resources, failures, pods that are unable to start, or nodes that cannot join the cluster.
 
 What do you know about kubernetes logs?
-
-Website is working but few Icons/photos are not loading? How will you know where is the error?
 
 Youre watching a movie and it suddenly stops? What will you do?
 Dont answer CHeck internet connectivity
@@ -92,10 +86,6 @@ KUbeadm- allows to setup highly available multi node setup
 minikube - simpler setup on just one node
 Vanilla kubernetes - most basic kubernetes
 
-What could be the reason why application is not deploying on Kubernetes?
-Image name is incorrect
-Image is not on ECR
-
 
 Do you know about node groups and nodes?
 Nodes are VM or EC2 instances 
@@ -107,8 +97,59 @@ Daemon set is used to run daemon pod on nodes
 If you delete a daemon set all pods of daemon set will also be deleted
 
 
+Which version of kubernetes & EKS you have worked on?
+
+Kubernertes -> 1.24 se le ke 1.27 tak 1.28 is upcoming
+EKS ->  Kubernetes 1.27
+	Kubernetes 1.26
+	Kubernetes 1.25
+	Kubernetes 1.24
+	Kubernetes 1.23 (expires in October this year)
 
 
+
+Name a service which is similar to ASG in K8s / How is autoscaling achieved in kubernetes.
+-> HPA and VPA for POD scaling and ClusterAutoscaling for Node based scaling
+
+HPA & VPA & CA
+-> HPA scales the number of pods and VPA assigns more resources to existing pods if the threshold is met.
+   Scales your cluster nodes based on additional capacity needs for example some pods go to pending state due to resource starvation
+   then it will request AWS for some additional nodes on which pods will then be scheduled.
+
+HPA 
+First create a deployment 
+then create a servioice and expose deployment to the srevice for example php-service
+then we create hpa 
+kubectl autoscale deployment php-srevice --cpu-percentage=50 --min=1 --max=10
+
+
+VPA
+2 types of resource configurations
+-> Requests - minimum number of resources that containers need
+-> Limits - maximum number of resources that a given container can consume
+
+
+RDS, DynamoDB
+have you worked on Terraform?
+Yes
+Have you done scripting? which scripting lang you know
+Have you used caching like redis?
+What is you day to day task as a SRE in TTN?
+
+If an alert comes and you resolve it, and if that alert comes again next time how would you know what have you done previously to resolve it?
+How the traffic flows from the user to the pods on which the application is running.
+domain 
+DNS
+Load balance
+TG
+Instance
+Ingress
+Servrice Proxy
+POD
+
+VPC, subnets, IGW, NAT Gateway, Route tables, ASG
+How traffic flows from EC2 to end user, and vice versa.
+How would you insert data in a Database using SQS & SNS.
 
 
 
