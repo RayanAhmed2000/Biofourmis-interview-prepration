@@ -108,10 +108,7 @@ What is the difference between RC and RS?
 If we have multiple labels, then in case of RC if any one labels matches RC kehta hai ye mera POD Hai
 And in case of RS jab tak saare labels match nahi hote tab tak wo nahi manta ki ye POD mera hai
 
-Why is my pod going in pending state
-Label and nodeselector value not matching
-You have tainted nodes and tolerations are not defned
-Kubescheduler ka pod that is on master node is not running
+
 
 DEBUGGING
 ---------
