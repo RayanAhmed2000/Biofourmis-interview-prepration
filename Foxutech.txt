@@ -9,6 +9,8 @@ REASONS
 - pvc : if pod is dependent on PV and the pv is not ready 
 - init container
 - image pull back error
+- Kubescheduler ka pod that is on master node is not running
+
 
 TROUBLESHOOTING
 
