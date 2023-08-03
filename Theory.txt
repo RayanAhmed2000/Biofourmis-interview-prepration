@@ -23,9 +23,9 @@ Distributed systems like kuberneets can be hard to manage because there are mult
 Kubernets provides us with custom health check at different levels to make our deployment more robust
 we have
 
-Liveness -> checks for application availability or livesness if application is not live then kubernetes removes the pod and starts another one to replace it
+Liveness -> checks if the container needs restart because of deadlock if not then kubernetes removes the pod and starts another one to replace it.
 Startup -> 
-Readiness - > lets kuberneets know when your application is ready to serve traffic if the readiness probe fails then kubernets will not send traffic to this pod 
+Readiness - > lets kuberneets know when your application is ready to serve traffic if the readiness probe fails then kubernets will not send traffic to this pod.
 
 
 
