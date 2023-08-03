@@ -16,6 +16,19 @@ TOPICS
 -> Alerts OUM  
 -> Bash scriping DONE
 
+PROBES
+------
+
+Distributed systems like kuberneets can be hard to manage because there are multiple components working togethetr that are strictly deplendet on each other 
+Kubernets provides us with custom health check at different levels to make our deployment more robust
+we have
+
+Liveness -> checks for application availability or livesness if application is not live then kubernetes removes the pod and starts another one to replace it
+Startup -> 
+Readiness - > lets kuberneets know when your application is ready to serve traffic if the readiness probe fails then kubernets will not send traffic to this pod 
+
+
+
 KUBERNETES COMMAND EXECUTION PROCESS
 ------------------------------------
 
@@ -257,3 +270,9 @@ Downstream service – One of the downstream services on which the application r
 Liveness probes– Liveness probes could have misconfigured or probe fails due to any reason.
 Port already in use: Two or more containers are using the same port, which doesn’t work if they’re from the same Pod
   
+ALERT MANAGER
+-------------
+
+ALert manager is a pod that triggeres mail and alerts on emails or slack
+
+
