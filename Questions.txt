@@ -92,20 +92,6 @@ Nodes are VM or EC2 instances
 Node groups are group of EC2 instances
 
 
-Daemon sets?
-Daemon set is used to run daemon pod on nodes 
-If you delete a daemon set all pods of daemon set will also be deleted
-
-
-Which version of kubernetes & EKS you have worked on?
-
-Kubernertes -> 1.24 se le ke 1.27 tak 1.28 is upcoming
-EKS ->  Kubernetes 1.27
-	Kubernetes 1.26
-	Kubernetes 1.25
-	Kubernetes 1.24
-	Kubernetes 1.23 (expires in October this year)
-
 
 
 Name a service which is similar to ASG in K8s / How is autoscaling achieved in kubernetes.
