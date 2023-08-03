@@ -17,3 +17,21 @@ check pod logs
 check scheduler pod logs
 check node affinity taint and tolerations pvc image name 
 
+
+
+CRASH LOOP BACK
+
+Insufficient resources—lack of resources prevents the container from loading
+Locked file/database/port—a resource already locked by another container
+No proper reference/Configuration—reference to scripts or binaries that are not present on the container or any misconfiguration on underlying system such as read-only filesystem
+Config loading/Setup error—a server cannot load the configuration file or initial setup like init-container failing
+Connection issues—DNS or kube-DNS is not able to connect to a external services
+Downstream service – One of the downstream services on which the application relies can’t be reached or the connection fails (database, backend, etc.)
+Liveness probes– Liveness probes could have misconfigured or probe fails due to any reason.
+Port already in use: Two or more containers are using the same port, which doesn’t work if they’re from the same Pod
+
+
+TROUBLSHOOTING
+
+check events
+check pod logs
