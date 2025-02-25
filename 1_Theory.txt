@@ -34,11 +34,13 @@ HPA controller | Adjusts the number of pod replicas based on CPU/memory usage.
 
 Worker Node Components - 
 
-- Kubelet : It is agent that runs on each worker node. 
+- Kubelet : Kubelet is an agent running on each worker node that communicates with the Kube-API Server and ensures that the containers defined in the PodSpec (YAML/JSON file) are running as expected. In short Node ki info deta hai Master Node ko
+Kubelet registers the worker node with the master node
+Monitors node health
 
 - Kube-proxy :
-
-
+Kube-Proxy is responsible for networking and ensuring that traffic reaches the correct pod inside the cluster. It runs on every worker node.
+Manages network routing, service discovery, and load balancing.
 
 
 
