@@ -1,3 +1,55 @@
+Components of Kubernetes Cluster
+--------------------------------
+
+Mater Node components - 
+ 
+- Kube-ApiServer : It manages all the kubernetes Api requests. It communicates with other components. It autheticates and checks whether the user has permissoions to run the specific kubernetes command. Below is summary of how authetication/authorization is done
+Authentication (Who are you) - 
+Certificates/tokens/Passwords
+
+Authorization (What are you allowed to do?)
+RBAC - defines roles & permissions using Roles, ClusterRoles, RoleBindings, and ClusterRoleBindings.
+
+to check a user’s permissions
+kubectl auth can-i <verb> <resource> --as=<user>
+kubectl auth can-i create pods --as=user1
+
+
+
+
+- etcd : It stores the entire data of kubernetes cluster, including state, configuration, secrets etc. If we want to take backup of our cluster we can take abackup of etcd
+
+- kube-scheduler : it determines on which node pod should be scheduled based upon the availability, resource utilization, affinity and other constarints
+
+- kube-controller : It is responsible for maintaining desried state of various K8s componnents example 
+Nodes Controller (kubectl get nodes) | if node is unresponsive it it marks it not ready and deletes the pods running on it
+RC/DC/StatefulSets Controller 
+Jobs Controller (kubectl get jobs)
+CronJobs Controller (Kubectl get cronjobs)
+Service Controller (kubectl get service)
+endpoints controller (kubectl get endpoints) | Ensures that services always route traffic to healthy pods 
+HPA controller | Adjusts the number of pod replicas based on CPU/memory usage.
+
+
+
+Worker Node Components - 
+
+- Kubelet : It is agent that runs on each worker node. 
+
+- Kube-proxy :
+
+
+
+
+
+
+
+
+
+
+
+
+
 HOST AND NETWORK ID
 -------------------
 
