@@ -203,11 +203,20 @@ service ip or kubeproxy provides endpoints for the application
 New pods automatically added into the endpoints of service ip
 HOW? by using labels
 
+
+We Use 'services' in K8s to enhance the networking capabilities of PODS
+- Load balancing
+- Stable IP address
+
+
+
 SERVICE IP TYPES
   - CLuster IP (Only accessibler from within pod)
   - Node Port (Accessibler from outside)
-
+  - Load Balancer 
 to make node port add --type=NodePort
+
+PODS <--------- Service <------- Ingress <---------- Trafffic from Outside
 
 
 INGRESS
