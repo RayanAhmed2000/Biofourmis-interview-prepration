@@ -219,6 +219,16 @@ to make node port add --type=NodePort
 PODS <--------- Service <------- Ingress <---------- Trafffic from Outside
 
 
+Use Services when:
+You need non-HTTP traffic routing
+You're handling internal Pod-to-Pod communication
+
+Use Ingress when
+I use Ingress when I need HTTP routing, SSL termination, 
+or want to expose multiple services over the same Load Balancer 
+(e.g., /api to one service, /admin to another)." PATH BASED ROUTING
+
+
 INGRESS
 -------
 
